@@ -1,8 +1,8 @@
 class Gtkx3 < Formula
   desc "Toolkit for creating graphical user interfaces"
   homepage "http://gtk.org/"
-  url "https://download.gnome.org/sources/gtk+/3.18/gtk+-3.18.0.tar.xz"
-  sha256 "7fb8ae257403317d3852bad28d064d35f67e978b1fed8b71d5997e87204271b9"
+  url "https://download.gnome.org/sources/gtk+/3.18/gtk+-3.18.2.tar.xz"
+  sha256 "5dbec561c4a00070073bf9cf4cfdd61fab4a14c8ff5b15d700bd378f8185e152"
 
   option :universal
   option "with-quartz-relocation", "Build with quartz relocation support"
@@ -113,17 +113,6 @@ class Gtkx3 < Formula
   end
 end
 __END__
---- a/testsuite/gtk/notify.c  2015-09-24 12:10:30.000000000 +0200
-+++ b/testsuite/gtk/notify.c  2015-09-24 12:10:33.000000000 +0200
-@@ -418,10 +418,10 @@
- #ifdef GDK_WINDOWING_X11
-   if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) ;
    else
--#endif
-   if (g_type_is_a (type, GTK_TYPE_PLUG) ||
-       g_type_is_a (type, GTK_TYPE_SOCKET))
      return;
-+#endif
  
- #ifdef GDK_WINDOWING_WAYLAND
-   if (GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ()))
