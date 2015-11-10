@@ -21,7 +21,7 @@ class Pango < Formula
 
   depends_on "pkg-config" => :build
   depends_on "glib"
-  depends_on "cairo"
+  depends_on "jessevdk/gnome/cairo"
   depends_on "jessevdk/gnome/harfbuzz"
   depends_on "fontconfig"
   depends_on "jessevdk/gnome/gobject-introspection"
